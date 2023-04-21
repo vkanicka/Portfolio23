@@ -11,9 +11,9 @@ const BioComponent = ({ bio }: Props) => {
   const { name, title, headshot } = bio;
 
   return (
-    <section className="col-span-6 flex flex-row items-center gap-x-12">
+    <section className="flex flex-row items-center gap-x-6 lg:col-span-6 lg:gap-x-12">
       <img
-        className="h-40 w-40 rounded-full"
+        className="h-24 w-24 rounded-full lg:h-40 lg:w-40"
         src={headshot?.url}
         alt="headshot"
       />

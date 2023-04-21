@@ -7,10 +7,11 @@ type Props = {
 
 const ProjectsComponent = ({ projectsCollection }: Props) => {
   return (
-    <section className="col-span-10 mx-auto grid grid-cols-2 gap-12 lg:col-start-2">
+    <section className="flex flex-col gap-6 lg:col-span-10 lg:col-start-2 lg:mx-auto lg:grid lg:grid-cols-2 lg:gap-12">
       {projectsCollection?.map((project: Project, projectKey: number) => {
         return (
           <section key={projectKey}>
+            {project.title && <h4 className="lg:hidden">{project.title}</h4>}
             <ProjectComponent project={project} projectKey={projectKey} />
           </section>
         );

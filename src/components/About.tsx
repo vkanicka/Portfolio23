@@ -16,8 +16,8 @@ const AboutComponent = ({ about }: Props) => {
       {lists.map((list, listIndex) => {
         const { label, values, wordDivider } = list;
         return (
-          <ul key={listIndex}>
-            <h4>{label}: </h4>
+          <ul className="flex-wrap" key={listIndex}>
+            <h4 className="whitespace-no-wrap">{label}: </h4>
             {values.map((value, valueIndex) => {
               return (
                 <li key={valueIndex}>
@@ -30,6 +30,7 @@ const AboutComponent = ({ about }: Props) => {
                 </li>
               );
             })}
+            <hr className="w-full border-neutral-800 lg:hidden" />
           </ul>
         );
       })}
