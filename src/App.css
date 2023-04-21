@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer base {
+  html {
+    @apply bg-black lg:my-24;
+    font-family: "Jura", system-ui, sans-serif;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h1 {
+    @apply font-semibold lg:text-4xl;
   }
-  to {
-    transform: rotate(360deg);
+  h2 {
+    @apply font-normal lg:text-3xl;
+  }
+  h4 {
+    @apply lg:text-2xl;
+  }
+  ul {
+    @apply flex list-none flex-row gap-2;
+  }
+  li {
+    @apply text-white lg:text-xl;
+  }
+  a {
+    @apply text-my-lilac-400 hover:text-my-lilac-600;
   }
 }

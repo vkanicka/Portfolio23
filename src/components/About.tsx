@@ -1,0 +1,43 @@
+import About from "../models/About";
+
+type Props = {
+  about?: About;
+};
+
+const AboutComponent = ({ about }: Props) => {
+  if (!about) {
+    return <span>Loading...</span>;
+  }
+  const lists = about.listsCollection.items;
+  const externalLink = about.externalLink;
+
+  return (
+    <section className="col-span-8 flex flex-col gap-1">
+      {lists.map((list, listIndex) => {
+        const { label, values, wordDivider } = list;
+        return (
+          <ul key={listIndex}>
+            <h4>{label}: </h4>
+            {values.map((value, valueIndex) => {
+              return (
+                <li key={valueIndex}>
+                  {value}
+                  {valueIndex < values.length - 1 && (
+                    <span className="font-bold text-neutral-600">
+                      {(wordDivider === "|" ? " " : "") + wordDivider}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        );
+      })}
+      <h4>
+        {externalLink.label}:{" "}
+        <a href={externalLink.url}>{externalLink.urlShorthand}</a>
+      </h4>
+    </section>
+  );
+};
+export default AboutComponent;
