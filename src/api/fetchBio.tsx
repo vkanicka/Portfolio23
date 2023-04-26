@@ -38,7 +38,10 @@ const fetchBio = (setBio: {
         items {
           label
           url
-          icon
+          icon {
+            url
+            title
+          }
         }
       }
       projectsCollection {
