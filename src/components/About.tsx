@@ -12,7 +12,7 @@ const AboutComponent = ({ about }: Props) => {
   const externalLink = about.externalLink;
 
   return (
-    <section className="col-span-8 flex flex-col gap-1">
+    <section className="col-span-8 flex flex-col gap-3 sm:gap-1">
       {lists.map((list, listIndex) => {
         const { label, values, wordDivider } = list;
         return (
@@ -30,7 +30,7 @@ const AboutComponent = ({ about }: Props) => {
                 </li>
               );
             })}
-            <hr className="w-full border-neutral-800 lg:hidden" />
+            <hr className="mt-3 w-full border-neutral-800 sm:mt-1 lg:mt-0 lg:hidden" />
           </ul>
         );
       })}
