@@ -11,7 +11,7 @@ const SocialsComponent = ({ socialsCollection }: Props) => {
         {socialsCollection?.map((social: Social, socialKey: number) => {
           return (
             <li
-              className="w-full border-solid border-neutral-700 px-2 py-5 text-center first:rounded-t-lg last:rounded-b-lg last:border-0 hover:bg-neutral-800 sm:border-r lg:border-b lg:border-r-0 lg:border-neutral-800"
+              className="w-full border-solid border-neutral-700 px-2 py-5 text-center first:rounded-t-lg last:rounded-b-lg last:border-0 hover:bg-neutral-800 sm:border-r lg:border-b lg:border-r-0"
               key={socialKey}
             >
               <a
