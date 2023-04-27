@@ -20,7 +20,7 @@ const AboutComponent = ({ about }: Props) => {
             <h4 className="whitespace-no-wrap">{label}: </h4>
             {values.map((value, valueIndex) => {
               return (
-                <li key={valueIndex}>
+                <li className="hover:animate-ping" key={valueIndex}>
                   {value}
                   {valueIndex < values.length - 1 && (
                     <span className="font-bold text-neutral-600">

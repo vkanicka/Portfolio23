@@ -42,6 +42,9 @@ const fetchBio = (setBio: {
             url
             title
           }
+          file {
+            url
+          }
         }
       }
       projectsCollection {

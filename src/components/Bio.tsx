@@ -18,7 +18,7 @@ const BioComponent = ({ bio }: Props) => {
         alt="headshot"
       />
       <div className="flex flex-col gap-y-6">
-        <h1 className="">{name}</h1>
+        <h1 className="drop-shadow-glow">{name}</h1>
         <h2>{title}</h2>
       </div>
     </section>

@@ -5,5 +5,8 @@ type Social = {
     url: string;
     title: string;
   };
+  file: {
+    url: string;
+  };
 };
 export default Social;
