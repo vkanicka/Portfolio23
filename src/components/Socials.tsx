@@ -9,7 +9,7 @@ const SocialsComponent = ({ socialsCollection }: Props) => {
   const [showLabel, setShowLabel] = useState(-999);
   return (
     <address className="grid-start-10 grid-end-12 col-span-2 lg:ml-16">
-      <ul className="min-w-full flex-row items-center gap-0 rounded-lg bg-neutral-800 lg:mx-6 lg:flex lg:flex-col">
+      <ul className="min-w-[60px] max-w-full flex-row items-center gap-0 rounded-lg bg-neutral-800 lg:mx-6 lg:flex lg:flex-col">
         {socialsCollection?.map((social: Social, socialKey: number) => {
           return (
             <li
