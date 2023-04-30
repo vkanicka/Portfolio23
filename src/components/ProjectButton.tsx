@@ -12,11 +12,12 @@ const ProjectButton = ({
   setOpenReviews,
 }: Props) => {
   const toggleReviews = (status: boolean) => {
-    if (label !== "Reviews" || !setOpenReviews) {
+    if (isReviews || !setOpenReviews) {
       return;
     }
     setOpenReviews(status);
   };
+  const isReviews = label !== "Reviews";
 
   return (
     <a
