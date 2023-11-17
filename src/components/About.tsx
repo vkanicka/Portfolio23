@@ -20,7 +20,7 @@ const AboutComponent = ({ about }: Props) => {
             <h4 className="whitespace-no-wrap">{label}: </h4>
             {values.map((value, valueIndex) => {
               return (
-                <li className="hover:animate-ping" key={valueIndex}>
+                <li key={valueIndex}>
                   {value}
                   {valueIndex < values.length - 1 && (
                     <span className="font-bold text-neutral-600">
@@ -36,7 +36,9 @@ const AboutComponent = ({ about }: Props) => {
       })}
       <h4>
         {externalLink.label}:{" "}
-        <a href={externalLink.url}>{externalLink.urlShorthand}</a>
+        <a target="_blank" href={externalLink.url} rel="noreferrer">
+          {externalLink.urlShorthand}
+        </a>
       </h4>
     </section>
   );
