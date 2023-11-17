@@ -38,7 +38,7 @@ const ProjectReviews = ({ reviews, projectKey }: Props) => {
         return (
           <p
             className={
-              "whitespace-nowrap text-lg " +
+              "whitespace-nowrap text-sm " +
               colors[Math.floor(Math.random() * colors.length)]
             }
             key={reviewKey}
