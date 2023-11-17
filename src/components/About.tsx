@@ -6,7 +6,11 @@ type Props = {
 
 const AboutComponent = ({ about }: Props) => {
   if (!about) {
-    return <span>Loading...</span>;
+    return (
+      <span className="absolute left-1/2 top-1/2 text-center text-4xl text-stone-700">
+        Loading...
+      </span>
+    );
   }
   const lists = about.listsCollection.items;
   const externalLink = about.externalLink;

@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-y-10 bg-black text-my-blue lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-x-12 lg:gap-y-20">
+    <div className="flex flex-col gap-y-10 bg-black text-my-blue transition-all duration-500 ease-in lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-12 lg:gap-x-12 lg:gap-y-20">
       <header className="bg-black lg:col-span-10">
         <div className="flex flex-col gap-y-10 sm:gap-y-6 lg:gap-y-8">
           <BioComponent bio={bio} />
