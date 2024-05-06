@@ -13,7 +13,7 @@ const ProjectComponent = ({ project, projectKey }: Props) => {
     <section className="relative col-span-5">
       {projectImage && (
         <img
-          className="z-0 h-auto w-full hover:opacity-20"
+          className="z-0 h-auto max-h-[390px] w-full object-contain hover:opacity-20"
           src={projectImage.url}
           alt={projectImage.title}
         />
